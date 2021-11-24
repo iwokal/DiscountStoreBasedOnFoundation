@@ -45,6 +45,7 @@ using Foundation.Features.MyOrganization.Organization;
 using Foundation.Features.Search;
 using Foundation.Features.Settings;
 using Foundation.Features.Shared;
+using Foundation.Features.SpecialPrices.Extensions;
 using Foundation.Features.SpecialPrices.Factories;
 using Foundation.Features.SpecialPrices.Services;
 using Foundation.Features.Stores;
@@ -183,7 +184,10 @@ namespace Foundation.Infrastructure
             _services.AddSingleton<PromotionEngineContentLoader, FoundationPromotionEngineContentLoader>();
             _services.AddTransient<IItemFactory, DiscountItemFactory>();
             _services.AddTransient<Features.SpecialPrices.Services.ICartService, Features.SpecialPrices.Services.CartService>();
+            _services.AddTransient<IDiscountService, DiscountService>();
+            _services.AddTransient<IPriceService, PriceService>();
             _services.AddTransient<ISpecialCustomerService, SpecialCustomerService>();
+            _services.AddSingleton<IOrderGroupCalculator, SpecialOrderGroupCalculator>();
         }
 
         public void Initialize(InitializationEngine context)
