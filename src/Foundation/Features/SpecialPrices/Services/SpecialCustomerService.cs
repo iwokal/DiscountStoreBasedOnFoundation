@@ -4,6 +4,7 @@ using Foundation.Commerce.Customer;
 using Foundation.Commerce.Customer.Services;
 using Foundation.Features.SpecialPrices.DataAccess.Models;
 using Foundation.Features.SpecialPrices.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -27,7 +28,19 @@ namespace Foundation.Features.SpecialPrices.Services
 
         public bool IsSpecialCustomer(FoundationContact contact)
         {
-            return GetSpecialCustomerByUserId(contact.UserId).Any();
+            try
+            {
+                if (contact == null || contact.UserId == null)
+                {
+                    return false;
+                }
+                return GetSpecialCustomerByUserId(contact.UserId).Any();
+            }
+            catch(Exception ex)
+            {
+                _log.Error("Error while checking if user is super user", ex);
+                return false;
+            }
         }
 
         private List<SpecialCustomerModel> GetSpecialCustomers()
