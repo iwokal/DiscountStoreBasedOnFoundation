@@ -5,7 +5,7 @@ using System;
 
 namespace Foundation.Features.SpecialPrices.Factories
 {
-    public class DiscountItemFactory : ItemFactory
+    public class DiscountItemFactory : IItemFactory
     {
         private IDiscountService _discountService;
         private IPriceService _priceService;
@@ -17,14 +17,15 @@ namespace Foundation.Features.SpecialPrices.Factories
             _priceService = priceService;
         }
 
-        public override Item CreateItem(string sku)
+        public Item CreateItem(string sku)
         {
             try
             {
-                CreatedItem.SKU = sku;
-                CreatedItem.Price = _priceService.GetPriceBySku(sku);
-                CreatedItem.Discount = _discountService.GetDiscountBySku(sku);
-                return CreatedItem;
+                var newItem = new Item();
+                newItem.SKU = sku;
+                newItem.Price = _priceService.GetPriceBySku(sku);
+                newItem.Discount = _discountService.GetDiscountBySku(sku);
+                return newItem;
             }
             catch (Exception ex)
             {

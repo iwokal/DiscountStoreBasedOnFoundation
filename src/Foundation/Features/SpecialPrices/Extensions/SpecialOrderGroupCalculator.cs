@@ -42,8 +42,9 @@ namespace Foundation.Features.SpecialPrices.Extensions
                         if (createdItem.Price == null)
                         {
                             createdItem.Price = lineItem.PlacedPrice;
-                            _cartService.Add(createdItem);
                         }
+                        createdItem.Quantity = (int)lineItem.Quantity;
+                        _cartService.Add(createdItem);
                     }
                 }
                 var specialTotal = _cartService.GetTotal();

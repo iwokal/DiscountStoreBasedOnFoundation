@@ -1336,7 +1336,6 @@
     <Compile Include="Features\SpecialPrices\DataAccess\Models\SpecialPriceModel.cs" />
     <Compile Include="Features\SpecialPrices\Extensions\SpecialOrderGroupCalculator.cs" />
     <Compile Include="Features\SpecialPrices\Factories\IItemFactory.cs" />
-    <Compile Include="Features\SpecialPrices\Factories\ItemFactory.cs" />
     <Compile Include="Features\SpecialPrices\Factories\DiscountItemFactory.cs" />
     <Compile Include="Features\SpecialPrices\Models\Discount.cs" />
     <Compile Include="Features\SpecialPrices\Models\Item.cs" />
