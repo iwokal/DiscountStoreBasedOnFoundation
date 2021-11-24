@@ -17,8 +17,8 @@ Test products are here:
 <img src="https://i.imgur.com/k6Q4BNH.png" title="Foundation" alt="Foundation">
 
 IN CASE OF PROBLEMS WITH FRONT END RUN THIS TWO COMMANDS \Foundation\src\Foundation directory:
-npm install
-npm run dev
+1.npm install 
+2.npm run dev
 
 Original readme from founfation below:
 
