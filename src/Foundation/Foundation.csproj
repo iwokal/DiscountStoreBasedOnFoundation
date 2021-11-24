@@ -113,6 +113,9 @@
     <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
       <HintPath>..\..\packages\CsvHelper.7.1.0\lib\net45\CsvHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -1326,6 +1329,24 @@
     <Compile Include="Features\Shared\SelectionFactories\PreviewOptionSelectionFactory.cs" />
     <Compile Include="Features\Shared\SelectionFactories\TeaserSelectionFactory.cs" />
     <Compile Include="Features\Shared\SelectionFactories\TemplateListSelectionFactory.cs" />
+    <Compile Include="Features\SpecialPrices\Controllers\CartController.cs" />
+    <Compile Include="Features\SpecialPrices\DataAccess\Models\SpecialDiscountModel.cs" />
+    <Compile Include="Features\SpecialPrices\DataAccess\Models\ItemModel.cs" />
+    <Compile Include="Features\SpecialPrices\DataAccess\Models\SpecialPriceModel.cs" />
+    <Compile Include="Features\SpecialPrices\DataAccess\SqliteDataAccess.cs" />
+    <Compile Include="Features\SpecialPrices\Extensions\SpecialOrderGroupCalculator.cs" />
+    <Compile Include="Features\SpecialPrices\Factories\IItemFactory.cs" />
+    <Compile Include="Features\SpecialPrices\Factories\ItemFactory.cs" />
+    <Compile Include="Features\SpecialPrices\Factories\DiscountItemFactory.cs" />
+    <Compile Include="Features\SpecialPrices\Models\Discount.cs" />
+    <Compile Include="Features\SpecialPrices\Models\Item.cs" />
+    <Compile Include="Features\SpecialPrices\Models\StoreCart.cs" />
+    <Compile Include="Features\SpecialPrices\Services\CartService.cs" />
+    <Compile Include="Features\SpecialPrices\Services\DiscountService.cs" />
+    <Compile Include="Features\SpecialPrices\Services\ICartService.cs" />
+    <Compile Include="Features\SpecialPrices\Services\IDiscountService.cs" />
+    <Compile Include="Features\SpecialPrices\Services\IPriceService.cs" />
+    <Compile Include="Features\SpecialPrices\Services\PriceService.cs" />
     <Compile Include="Features\StandardPage\StandardPageTopPaddingModeSelectionFactory.cs" />
     <Compile Include="Features\Stores\IStoreService.cs" />
     <Compile Include="Features\CatalogContent\Services\ProductService.cs" />

@@ -45,6 +45,7 @@ using Foundation.Features.MyOrganization.Organization;
 using Foundation.Features.Search;
 using Foundation.Features.Settings;
 using Foundation.Features.Shared;
+using Foundation.Features.SpecialPrices.Factories;
 using Foundation.Features.Stores;
 using Foundation.Find.Facets;
 using Foundation.Find.Facets.Config;
@@ -177,6 +178,7 @@ namespace Foundation.Infrastructure
             _services.AddSingleton<ISchemaDataMapper<GenericProduct>, GenericProductSchemaDataMapper>();
             _services.AddSingleton<ISchemaDataMapper<LocationItemPage>, LocationItemPageSchemaDataMapper>();
             _services.AddSingleton<PromotionEngineContentLoader, FoundationPromotionEngineContentLoader>();
+            _services.AddTransient<IItemFactory, DiscountItemFactory>();
         }
 
         public void Initialize(InitializationEngine context)
