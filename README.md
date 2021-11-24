@@ -1,3 +1,14 @@
+This is proof-of-concept for implementing discount store assingnment in Episerver (Optimizely) Foundation project.
+
+To make sense for not using default price calculator and default promotion engine I came up with an idea that we want to handle prices normally for most users but we want to have some Special users with special prices. 
+
+Currently special price handling is only for user: admin@example.com (password: store), so you need to login to admin to test that functionality.
+
+In the Commerece database there are new tables: SpecialCustomer, SpecialPrice, SpecialDiscount to handle this specific prices based on ICartService and implementing custom OrderGroupCalculator. 
+
+
+Original readme from founfation below:
+
 <a href="https://github.com/episerver/Foundation"><img src="http://ux.episerver.com/images/logo.png" title="Foundation" alt="Foundation"></a>
 
 ## Foundation
