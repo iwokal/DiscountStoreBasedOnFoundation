@@ -46,6 +46,7 @@ using Foundation.Features.Search;
 using Foundation.Features.Settings;
 using Foundation.Features.Shared;
 using Foundation.Features.SpecialPrices.Factories;
+using Foundation.Features.SpecialPrices.Services;
 using Foundation.Features.Stores;
 using Foundation.Find.Facets;
 using Foundation.Find.Facets.Config;
@@ -62,6 +63,8 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Owin;
 using System.Web.Mvc;
+using CartService = Foundation.Features.Checkout.Services.CartService;
+using ICartService = Foundation.Features.Checkout.Services.ICartService;
 
 namespace Foundation.Infrastructure
 {
@@ -179,6 +182,8 @@ namespace Foundation.Infrastructure
             _services.AddSingleton<ISchemaDataMapper<LocationItemPage>, LocationItemPageSchemaDataMapper>();
             _services.AddSingleton<PromotionEngineContentLoader, FoundationPromotionEngineContentLoader>();
             _services.AddTransient<IItemFactory, DiscountItemFactory>();
+            _services.AddTransient<Features.SpecialPrices.Services.ICartService, Features.SpecialPrices.Services.CartService>();
+            _services.AddTransient<ISpecialCustomerService, SpecialCustomerService>();
         }
 
         public void Initialize(InitializationEngine context)

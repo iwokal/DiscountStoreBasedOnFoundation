@@ -13,14 +13,14 @@ namespace Foundation.Features.SpecialPrices.Services
         private static string _connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["EcfSqlConnection"].ConnectionString;
         private static readonly ILogger _log = LogManager.GetLogger(typeof(PriceService));
 
-        public double GetPriceBySku(string sku)
+        public decimal? GetPriceBySku(string sku)
         {
             try
             {
                 var priceEntity = LoadPricesBySku(sku).FirstOrDefault();
                 if (priceEntity == null)
                 {
-                    throw new ArgumentException();
+                    return null;
                 }
                 return priceEntity.Price;
             }
@@ -31,7 +31,7 @@ namespace Foundation.Features.SpecialPrices.Services
             }
         }
 
-        public static List<SpecialPriceModel> LoadPrices()
+        private List<SpecialPriceModel> LoadPrices()
         {
             using (SqlConnection con = new SqlConnection(_connectionString))
             {
@@ -40,7 +40,7 @@ namespace Foundation.Features.SpecialPrices.Services
             }
         }
 
-        public static List<SpecialPriceModel> LoadPricesBySku(string sku)
+        private List<SpecialPriceModel> LoadPricesBySku(string sku)
         {
             using (SqlConnection con = new SqlConnection(_connectionString))
             {

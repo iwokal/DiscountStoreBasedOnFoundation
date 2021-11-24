@@ -7,7 +7,7 @@ namespace Foundation.Features.SpecialPrices.Services
         void Add(Item item);
         void Remove(Item item);
         void Remove(string sku);
-        double GetTotal();
+        decimal GetTotal();
         void Clear();
     }
 }

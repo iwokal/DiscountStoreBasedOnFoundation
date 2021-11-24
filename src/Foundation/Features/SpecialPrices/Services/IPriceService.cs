@@ -2,6 +2,6 @@
 {
     public interface IPriceService
     {
-        double GetPriceBySku(string sku);
+        decimal? GetPriceBySku(string sku);
     }
 }

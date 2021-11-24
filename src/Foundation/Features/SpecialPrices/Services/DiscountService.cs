@@ -36,7 +36,7 @@ namespace Foundation.Features.SpecialPrices.Services
             return true;
         }
 
-        public static List<SpecialDiscountModel> LoadDiscounts()
+        private List<SpecialDiscountModel> LoadDiscounts()
         {
             using (SqlConnection con = new SqlConnection(_connectionString))
             {
@@ -45,7 +45,7 @@ namespace Foundation.Features.SpecialPrices.Services
             }
         }
 
-        public static List<SpecialDiscountModel> LoadDiscountsBySku(string sku)
+        private List<SpecialDiscountModel> LoadDiscountsBySku(string sku)
         {
             using (SqlConnection con = new SqlConnection(_connectionString))
             {

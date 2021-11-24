@@ -1330,10 +1330,10 @@
     <Compile Include="Features\Shared\SelectionFactories\TeaserSelectionFactory.cs" />
     <Compile Include="Features\Shared\SelectionFactories\TemplateListSelectionFactory.cs" />
     <Compile Include="Features\SpecialPrices\Controllers\CartController.cs" />
+    <Compile Include="Features\SpecialPrices\DataAccess\Models\SpecialCustomerModel.cs" />
     <Compile Include="Features\SpecialPrices\DataAccess\Models\SpecialDiscountModel.cs" />
     <Compile Include="Features\SpecialPrices\DataAccess\Models\ItemModel.cs" />
     <Compile Include="Features\SpecialPrices\DataAccess\Models\SpecialPriceModel.cs" />
-    <Compile Include="Features\SpecialPrices\DataAccess\SqliteDataAccess.cs" />
     <Compile Include="Features\SpecialPrices\Extensions\SpecialOrderGroupCalculator.cs" />
     <Compile Include="Features\SpecialPrices\Factories\IItemFactory.cs" />
     <Compile Include="Features\SpecialPrices\Factories\ItemFactory.cs" />
@@ -1343,6 +1343,8 @@
     <Compile Include="Features\SpecialPrices\Models\StoreCart.cs" />
     <Compile Include="Features\SpecialPrices\Services\CartService.cs" />
     <Compile Include="Features\SpecialPrices\Services\DiscountService.cs" />
+    <Compile Include="Features\SpecialPrices\Services\SpecialCustomerService.cs" />
+    <Compile Include="Features\SpecialPrices\Services\ISpecialCustomerService.cs" />
     <Compile Include="Features\SpecialPrices\Services\ICartService.cs" />
     <Compile Include="Features\SpecialPrices\Services\IDiscountService.cs" />
     <Compile Include="Features\SpecialPrices\Services\IPriceService.cs" />

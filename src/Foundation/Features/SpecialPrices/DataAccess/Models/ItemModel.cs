@@ -1,8 +1,7 @@
 ﻿namespace Foundation.Features.SpecialPrices.DataAccess.Models
 {
-    public class ItemModel
+    public class SpecialCustomerModel
     {
-        public string SKU { get; set; }
-        public string Name { get; set; }
+        public string UserId { get; set; }
     }
 }

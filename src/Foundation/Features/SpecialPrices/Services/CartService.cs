@@ -33,23 +33,23 @@ namespace Foundation.Features.SpecialPrices.Services
             _cart.Items.Remove(sku);
         }
 
-        public double GetTotal()
+        public decimal GetTotal()
         {
             try
             {
-                double total = 0;
+                decimal total = 0;
                 foreach (var item in _cart.Items)
                 {
                     var quantity = item.Value.Quantity;
                     var discount = item.Value.Discount;
-                    double price;
+                    decimal price;
                     if (discount != null)
                     {
-                        price = Math.Round(quantity / discount.Quantity * discount.Price + quantity % discount.Quantity * item.Value.Price, 2);
+                        price = Math.Round((quantity / discount.Quantity * discount.Price) + (decimal)((quantity % discount.Quantity) * item.Value.Price), 2);
                     }
                     else
                     {
-                        price = Math.Round(quantity * item.Value.Price, 2);
+                        price = Math.Round((decimal)(quantity * item.Value.Price), 2);
                     }
                     total += price;
                 }
@@ -58,9 +58,8 @@ namespace Foundation.Features.SpecialPrices.Services
             catch(Exception ex)
             {
                 _log.Error("Error while calculating cart total: ", ex);
-                throw ex;
+                throw;
             }
-
         }
 
         public void Clear()
