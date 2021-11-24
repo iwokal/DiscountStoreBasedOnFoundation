@@ -16,6 +16,10 @@ YOU NEED TO RESTORE THE DATABSES FROM BACKUPS in Foundation\DBbackups
 Test products are here: 
 <img src="https://i.imgur.com/k6Q4BNH.png" title="Foundation" alt="Foundation">
 
+IN CASE OF PROBLEMS WITH FRONT END RUN THIS TWO COMMANDS \Foundation\src\Foundation directory:
+npm install
+npm run dev
+
 Original readme from founfation below:
 
 <a href="https://github.com/episerver/Foundation"><img src="http://ux.episerver.com/images/logo.png" title="Foundation" alt="Foundation"></a>
