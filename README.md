@@ -10,6 +10,9 @@ YOU NEED TO RESTORE THE DATABSES FROM BACKUPS in Foundation\DBbackups
 
 (and maybe change connection strings in Foundation\Src\Foundation\connectionStrings.config, but they are now configured to standard default local server (MSSQL))
 
+Test products are here: 
+<img src="https://i.imgur.com/k6Q4BNH.png" title="Foundation" alt="Foundation">
+
 Original readme from founfation below:
 
 <a href="https://github.com/episerver/Foundation"><img src="http://ux.episerver.com/images/logo.png" title="Foundation" alt="Foundation"></a>
