@@ -6,6 +6,9 @@ Currently special price handling is only for user: admin@example.com (password: 
 
 In the Commerece database there are new tables: SpecialCustomer, SpecialPrice, SpecialDiscount to handle this specific prices based on ICartService and implementing custom OrderGroupCalculator. 
 
+YOU NEED TO RESTORE THE DATABSES FROM BACKUPS in Foundation\DBbackups
+
+(and maybe change connection strings in Foundation\Src\Foundation\connectionStrings.config, but they are now configured to standard default local server (MSSQL))
 
 Original readme from founfation below:
 
